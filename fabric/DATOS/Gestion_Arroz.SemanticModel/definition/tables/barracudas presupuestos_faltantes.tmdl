@@ -1,0 +1,402 @@
+table 'barracudas presupuestos_faltantes'
+	lineageTag: b657850a-c089-49ea-94c6-4b436ced554b
+	sourceLineageTag: [dbo].[barracudas presupuestos_faltantes]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6528ab13-7910-4ac4-b845-30c1c78d2ea3
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 74f746f5-d183-41d3-9c71-19ff132926ae
+		sourceLineageTag: fecha
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuesto_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 64a866e8-227b-452e-86fb-6767e27b1361
+		sourceLineageTag: presupuesto_id
+		summarizeBy: sum
+		sourceColumn: presupuesto_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column superficie
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 5e3aa0cd-3c2d-4405-a8f4-9e9ae1d2c010
+		sourceLineageTag: superficie
+		summarizeBy: sum
+		sourceColumn: superficie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column rinde
+		dataType: double
+		sourceProviderType: float
+		lineageTag: bff1f5c5-9d06-4c63-8775-e30a436d8732
+		sourceLineageTag: rinde
+		summarizeBy: sum
+		sourceColumn: rinde
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column rinde_equivalente
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 8c7739f5-fe7a-41d0-9d49-d7be9aa5b927
+		sourceLineageTag: rinde_equivalente
+		summarizeBy: sum
+		sourceColumn: rinde_equivalente
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 95e9f2ea-ae6b-426f-a828-b66a24e88b57
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 6670d116-2a62-43d0-803c-ecf743fa52fa
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: bd03338a-19c4-46c5-bc1e-ea8e865448d7
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column gastos_arrendamiento
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 28a7f8fb-58e9-4205-9ddb-b43347d6cb00
+		sourceLineageTag: gastos_arrendamiento
+		summarizeBy: sum
+		sourceColumn: gastos_arrendamiento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column acondicionamiento
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 7f409e06-4fab-4cbd-9bea-723c15d6566b
+		sourceLineageTag: acondicionamiento
+		summarizeBy: sum
+		sourceColumn: acondicionamiento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column siembra
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 1a2f3e2d-61c1-4469-9fd3-873f252c3f08
+		sourceLineageTag: siembra
+		summarizeBy: sum
+		sourceColumn: siembra
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cosecha
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 8cec454a-b3b2-4f43-af8e-987d2d33ddcc
+		sourceLineageTag: cosecha
+		summarizeBy: sum
+		sourceColumn: cosecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column honorarios
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 66a72e7b-1dbb-455d-b30b-189f3e39554b
+		sourceLineageTag: honorarios
+		summarizeBy: sum
+		sourceColumn: honorarios
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 9f9489e7-ceee-4795-b87b-0e0e9252ff62
+		sourceLineageTag: user_id
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column gastos_directos
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 2049471d-6488-4d2c-90bf-bf0fa2f3cdda
+		sourceLineageTag: gastos_directos
+		summarizeBy: sum
+		sourceColumn: gastos_directos
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gastos_comercializacion
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 61c55d69-e087-46fd-bfcb-f72bb9eb6017
+		sourceLineageTag: gastos_comercializacion
+		summarizeBy: sum
+		sourceColumn: gastos_comercializacion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column margen_bruto
+		dataType: double
+		sourceProviderType: float
+		lineageTag: acef3776-269d-46ab-b612-04a18808daa0
+		sourceLineageTag: margen_bruto
+		summarizeBy: sum
+		sourceColumn: margen_bruto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gastos_estructura
+		dataType: double
+		sourceProviderType: float
+		lineageTag: c3af5b4e-60ad-424d-8ba8-f984f6e8f552
+		sourceLineageTag: gastos_estructura
+		summarizeBy: sum
+		sourceColumn: gastos_estructura
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column margen_neto
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 626d376e-c253-4b94-bdb1-98d4a7ad1d3c
+		sourceLineageTag: margen_neto
+		summarizeBy: sum
+		sourceColumn: margen_neto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gastos_otros
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 60fd4daf-37b0-4626-88e0-3bf1c215fc59
+		sourceLineageTag: gastos_otros
+		summarizeBy: sum
+		sourceColumn: gastos_otros
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column agroquimicos
+		dataType: double
+		sourceProviderType: float
+		lineageTag: c12229d7-9905-4476-8125-16d22968d2ed
+		sourceLineageTag: agroquimicos
+		summarizeBy: sum
+		sourceColumn: agroquimicos
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column herbicidas
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 5d27587e-2e88-4f38-83fa-d4d25083f56f
+		sourceLineageTag: herbicidas
+		summarizeBy: sum
+		sourceColumn: herbicidas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column insecticidas
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 896ee792-c424-4bac-9abc-b61e49760ea9
+		sourceLineageTag: insecticidas
+		summarizeBy: sum
+		sourceColumn: insecticidas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fungicidas
+		dataType: double
+		sourceProviderType: float
+		lineageTag: e2d826f8-6f48-49f6-b179-ff2fd17882c7
+		sourceLineageTag: fungicidas
+		summarizeBy: sum
+		sourceColumn: fungicidas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column coadyuvantes
+		dataType: double
+		sourceProviderType: float
+		lineageTag: f1427a8a-c47c-4573-a1a3-13af621d4b37
+		sourceLineageTag: coadyuvantes
+		summarizeBy: sum
+		sourceColumn: coadyuvantes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fertilizantes
+		dataType: double
+		sourceProviderType: float
+		lineageTag: ba4f8276-078b-406a-a337-44141dfc926b
+		sourceLineageTag: fertilizantes
+		summarizeBy: sum
+		sourceColumn: fertilizantes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column factor
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 88b9b0fa-656f-4732-b550-d7c687efa2d1
+		sourceLineageTag: factor
+		summarizeBy: sum
+		sourceColumn: factor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column precio
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 6d7e55d6-8098-41e6-b864-8791cf52670c
+		sourceLineageTag: precio
+		summarizeBy: sum
+		sourceColumn: precio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ingresos_brutos
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 00cacd6d-fb34-44de-9594-c6401f65bcce
+		sourceLineageTag: ingresos_brutos
+		summarizeBy: sum
+		sourceColumn: ingresos_brutos
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column laboreos
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 38e0f5ff-b470-46a7-9db9-ad90951e52e5
+		sourceLineageTag: laboreos
+		summarizeBy: sum
+		sourceColumn: laboreos
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column riego
+		dataType: double
+		sourceProviderType: float
+		lineageTag: de971ada-c6d7-43d3-ada1-1b7c0433c877
+		sourceLineageTag: riego
+		summarizeBy: sum
+		sourceColumn: riego
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column semillas
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 853147c8-ead3-4e71-9691-4bac0a9656de
+		sourceLineageTag: semillas
+		summarizeBy: sum
+		sourceColumn: semillas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'barracudas presupuestos_faltantes' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_faltantes
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

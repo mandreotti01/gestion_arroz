@@ -1,0 +1,89 @@
+table 'barracudas presupuestos_estructuras_gastos_items'
+	lineageTag: b7bc7681-e5e3-4e7b-851f-602402ddea6a
+	sourceLineageTag: [dbo].[barracudas presupuestos_estructuras_gastos_items]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7eccad8e-97c8-4329-b754-1811c90223a9
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuestos_estructuras_rubro_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: a37e1920-755e-426c-989a-9132bd922934
+		sourceLineageTag: presupuestos_estructuras_rubro_id
+		summarizeBy: sum
+		sourceColumn: presupuestos_estructuras_rubro_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dd3b67ae-49f7-4c3a-8c06-2c58bd4fbc41
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column suma_forecast
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: be7e38a7-e80e-427b-9f9b-ea748e7afb1f
+		sourceLineageTag: suma_forecast
+		summarizeBy: sum
+		sourceColumn: suma_forecast
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: e03c4f20-6406-4f02-a853-d301cf274679
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 814ecd90-d0d0-4021-8245-23b5919acf7e
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 4098e199-8e6c-43ac-ad9a-c3d31de07a39
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_estructuras_gastos_items' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_estructuras_gastos_items
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

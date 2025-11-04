@@ -1,0 +1,78 @@
+table 'barracudas presupuestos_escenarios_tipos'
+	lineageTag: 7494d460-a30a-463b-a887-f9602341439e
+	sourceLineageTag: [dbo].[barracudas presupuestos_escenarios_tipos]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b44ed8b0-bab9-4491-8070-f105a7bea765
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cc01c360-4754-4ede-b4a2-35dae17733b7
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania_monitoreo_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2078f0ba-fdf1-4343-a1cf-e1bd90ccdfc5
+		sourceLineageTag: campania_monitoreo_id
+		summarizeBy: sum
+		sourceColumn: campania_monitoreo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: cbf01422-98ff-4fe2-85bc-6c1d1426a743
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 71ade134-f39a-420d-9b83-c919b630f312
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: a582f40e-80f5-4ec5-be26-87f3af3b5ba6
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_escenarios_tipos' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_escenarios_tipos
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

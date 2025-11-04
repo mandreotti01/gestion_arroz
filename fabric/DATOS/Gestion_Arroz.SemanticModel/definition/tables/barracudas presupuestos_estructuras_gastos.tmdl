@@ -1,0 +1,192 @@
+table 'barracudas presupuestos_estructuras_gastos'
+	lineageTag: 2c3b60ef-6ae1-472c-b07f-b56b4d555d10
+	sourceLineageTag: [dbo].[barracudas presupuestos_estructuras_gastos]
+
+	column flexflied
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1b0bf89f-1594-4399-8a00-3937db56c580
+		sourceLineageTag: flexflied
+		summarizeBy: none
+		sourceColumn: flexflied
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: a81454dc-8d85-4439-a0c8-1d435243e7c3
+		sourceLineageTag: user_id
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: bb370e9f-3310-4ad9-a932-90c8d22c690e
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: aac6efc2-5094-4d63-a41b-1dcb0a92cfbf
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 4b6c407d-e54a-4eb2-b75c-cefa0a9fd425
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad_negocio
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a80c12fd-4ced-4500-9472-4093f47e2884
+		sourceLineageTag: unidad_negocio
+		summarizeBy: none
+		sourceColumn: unidad_negocio
+
+		annotation SummarizationSetBy = Automatic
+
+	column producto
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e9c952a1-641d-420a-8bf3-e62b63f5552e
+		sourceLineageTag: producto
+		summarizeBy: none
+		sourceColumn: producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad_productiva
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9fa1311a-93a3-455e-8c30-8b023a693a5c
+		sourceLineageTag: unidad_productiva
+		summarizeBy: none
+		sourceColumn: unidad_productiva
+
+		annotation SummarizationSetBy = Automatic
+
+	column centro_costo
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ff44258a-54c9-4289-9589-1a8b0a48358e
+		sourceLineageTag: centro_costo
+		summarizeBy: none
+		sourceColumn: centro_costo
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f37a7fc4-8d84-4eea-b936-90cf80d6d073
+		sourceLineageTag: campania
+		summarizeBy: none
+		sourceColumn: campania
+
+		annotation SummarizationSetBy = Automatic
+
+	column moneda
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: eee477d4-a7af-4a02-8a34-fc9dc6a9106b
+		sourceLineageTag: moneda
+		summarizeBy: sum
+		sourceColumn: moneda
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e54dd128-5304-4531-adff-d2867681c986
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuestos_estructuras_rubro_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 14535996-c813-4051-b785-5d6bdd42354a
+		sourceLineageTag: presupuestos_estructuras_rubro_id
+		summarizeBy: sum
+		sourceColumn: presupuestos_estructuras_rubro_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c8129dbf-869d-4ddb-b0b4-021aff370464
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 257cda17-b2a4-427b-9fcf-17237832e803
+		sourceLineageTag: numero
+		summarizeBy: none
+		sourceColumn: numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column compania
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 10f454bd-ef55-43d3-98ec-ecab9a061135
+		sourceLineageTag: compania
+		summarizeBy: sum
+		sourceColumn: compania
+
+		annotation SummarizationSetBy = Automatic
+
+	column cuenta
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 94b13195-86ee-4804-8725-02d4d26be3a7
+		sourceLineageTag: cuenta
+		summarizeBy: sum
+		sourceColumn: cuenta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_estructuras_gastos' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_estructuras_gastos
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

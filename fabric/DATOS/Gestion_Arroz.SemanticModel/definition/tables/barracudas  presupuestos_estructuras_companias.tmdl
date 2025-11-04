@@ -1,0 +1,67 @@
+table 'barracudas  presupuestos_estructuras_companias'
+	lineageTag: 5b9e2251-5919-41b1-89c4-3b9b8ca62545
+	sourceLineageTag: [dbo].[barracudas  presupuestos_estructuras_companias]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: a4fbd299-d803-4bb4-9fe0-09d81a54dc84
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a245c3fe-4688-4849-aa67-9dcfbfc22943
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: fc2d3b8c-de7d-43d4-855e-84720ca1d771
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: fcf3b008-88b4-4368-9274-eec4c35b0132
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 54164d52-87d3-434b-a1cd-62df2bc1801f
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas  presupuestos_estructuras_companias' = entity
+		mode: directLake
+		source
+			entityName: barracudas  presupuestos_estructuras_companias
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,55 @@
+table 'barracudas establecimientos'
+	lineageTag: f3bb794a-3cd5-499c-ab97-884e43d07c07
+	sourceLineageTag: [dbo].[barracudas establecimientos]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 9f5e259d-88fc-4fbc-81d7-d58a867aab12
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 38f3a49f-1163-4bed-b983-a4650e15c3be
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e319a25f-4190-491d-9a42-89343f0e7f3a
+		sourceLineageTag: grupo
+		summarizeBy: none
+		sourceColumn: grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column up
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d2319cde-da4a-4e3b-88de-174f8690018e
+		sourceLineageTag: up
+		summarizeBy: none
+		sourceColumn: up
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas establecimientos' = entity
+		mode: directLake
+		source
+			entityName: barracudas establecimientos
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

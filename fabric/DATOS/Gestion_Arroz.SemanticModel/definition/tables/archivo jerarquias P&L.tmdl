@@ -1,0 +1,106 @@
+table 'archivo jerarquias P&L'
+	lineageTag: 727bee2e-a926-49e5-82eb-0eaff2be22c0
+	sourceLineageTag: [dbo].[archivo jerarquias P&L]
+
+	column LEVEL_2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8ca77a6e-d464-4fd5-a8d4-82259d36179e
+		sourceLineageTag: LEVEL_2
+		summarizeBy: none
+		sourceColumn: LEVEL_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column LEVEL_3
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 533ed3d6-18ae-4004-96f3-5375c17e2d4d
+		sourceLineageTag: LEVEL_3
+		summarizeBy: none
+		sourceColumn: LEVEL_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Combinada
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 19373d25-9add-4ba4-a364-a5857c77ab65
+		sourceLineageTag: Combinada
+		summarizeBy: none
+		sourceColumn: Combinada
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estructura
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e7243cca-d1b5-4d1c-873e-10505ec4cec4
+		sourceLineageTag: Estructura
+		summarizeBy: none
+		sourceColumn: Estructura
+
+		annotation SummarizationSetBy = Automatic
+
+	column UN
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: bb0272d0-15fc-4501-8528-7ace3540f8bd
+		sourceLineageTag: UN
+		summarizeBy: sum
+		sourceColumn: UN
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c58ffd8f-2a9c-466b-b1ab-70c674fef0ae
+		sourceLineageTag: CC
+		summarizeBy: sum
+		sourceColumn: CC
+
+		annotation SummarizationSetBy = Automatic
+
+	column CTA
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 38d4486b-24f7-4bab-b4cd-761b197dde35
+		sourceLineageTag: CTA
+		summarizeBy: sum
+		sourceColumn: CTA
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESCRIPCION
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6b01069a-c057-4a81-ab46-ada85c76f4d3
+		sourceLineageTag: DESCRIPCION
+		summarizeBy: none
+		sourceColumn: DESCRIPCION
+
+		annotation SummarizationSetBy = Automatic
+
+	column LEVEL_1
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7cdd7d8f-e0fa-4dfe-887d-28a769b84136
+		sourceLineageTag: LEVEL_1
+		summarizeBy: none
+		sourceColumn: LEVEL_1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'archivo jerarquias P&L' = entity
+		mode: directLake
+		source
+			entityName: archivo jerarquias P&L
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

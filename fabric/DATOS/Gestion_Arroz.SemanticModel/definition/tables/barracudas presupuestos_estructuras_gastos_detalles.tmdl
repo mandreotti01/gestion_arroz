@@ -1,0 +1,168 @@
+table 'barracudas presupuestos_estructuras_gastos_detalles'
+	lineageTag: aba1de6a-263f-461b-82b3-3a78e180aa10
+	sourceLineageTag: [dbo].[barracudas presupuestos_estructuras_gastos_detalles]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2cd63e64-63f2-4656-8428-ee59c4f15a89
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 4c958143-9fbf-4214-a7f3-31fcaa18ec37
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f3879c3c-91d5-47c0-9f1a-c5e54d07ffec
+		sourceLineageTag: campania
+		summarizeBy: none
+		sourceColumn: campania
+
+		annotation SummarizationSetBy = Automatic
+
+	column cantidad
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 48f7c312-bfad-4bee-b026-68ae1316fa4e
+		sourceLineageTag: cantidad
+		summarizeBy: sum
+		sourceColumn: cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column precio
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 923baead-73a8-4c5d-b401-9b06fb4c554f
+		sourceLineageTag: precio
+		summarizeBy: sum
+		sourceColumn: precio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: bdddf7e5-cc71-4d89-8c6c-5cb0781a65a8
+		sourceLineageTag: user_id
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 4032ade1-e4eb-446c-818f-be3a20abddca
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 79268c48-d183-40b0-8572-8820a65311eb
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuestos_estructuras_gasto_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 593cd579-ecdf-49e5-a9db-af86475003f0
+		sourceLineageTag: presupuestos_estructuras_gasto_id
+		summarizeBy: sum
+		sourceColumn: presupuestos_estructuras_gasto_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuestos_estructuras_gastos_item_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d9d0a00e-bef1-4d4f-93a4-30a6caad0ed7
+		sourceLineageTag: presupuestos_estructuras_gastos_item_id
+		summarizeBy: sum
+		sourceColumn: presupuestos_estructuras_gastos_item_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column suma_forecast
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6e881fc3-4e23-4038-a8e3-48d360dd9f61
+		sourceLineageTag: suma_forecast
+		summarizeBy: sum
+		sourceColumn: suma_forecast
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 272d30a5-10c4-498b-ac1e-c5ea55b5e4e4
+		sourceLineageTag: mes
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 1ebb63d7-8041-4499-ac74-e0225f816628
+		sourceLineageTag: anio
+		summarizeBy: sum
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column periodo
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 7a74dd75-7ffa-4314-b3bb-67a862f8cebf
+		sourceLineageTag: periodo
+		summarizeBy: none
+		sourceColumn: periodo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_estructuras_gastos_detalles' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_estructuras_gastos_detalles
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

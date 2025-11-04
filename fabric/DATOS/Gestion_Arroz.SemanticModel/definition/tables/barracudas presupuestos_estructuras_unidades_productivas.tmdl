@@ -1,0 +1,74 @@
+table 'barracudas presupuestos_estructuras_unidades_productivas'
+	lineageTag: 69e757d1-a7de-4311-96c7-d451250a12dc
+	sourceLineageTag: [dbo].[barracudas presupuestos_estructuras_unidades_productivas]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 08555b1e-d6c4-45ae-a862-5bb1124a4400
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 48ff9c92-d712-435c-bc29-8d051404b8de
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column pais
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a40e20b3-441d-4c1f-95ea-6270c9c16fdf
+		sourceLineageTag: pais
+		summarizeBy: none
+		sourceColumn: pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column clasificacion
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 562e3a30-d833-4c06-b1cf-78bf4afda6fb
+		sourceLineageTag: clasificacion
+		summarizeBy: none
+		sourceColumn: clasificacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unidad Productiva'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cb4164e0-b339-4a76-9b6a-92d038603d19
+		sourceLineageTag: Unidad Productiva
+		summarizeBy: none
+		sourceColumn: Unidad Productiva
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UP Agrup'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 95dad516-bc65-4382-838a-f72a19e549d1
+		sourceLineageTag: UP Agrup
+		summarizeBy: none
+		sourceColumn: UP Agrup
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_estructuras_unidades_productivas' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_estructuras_unidades_productivas
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,171 @@
+table 'Volumen y Superficie'
+	lineageTag: e909f175-5a95-43b3-9f58-6288f23e5ba9
+	sourceLineageTag: [dbo].[Volumen y Superficie]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c633027d-8f4b-49f1-b24a-914373c297d2
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 16cef6fb-ebe8-4c30-b100-0828299376d3
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania_monitoreo_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 34b15d30-90bb-4ef6-b125-86bbce30e26c
+		sourceLineageTag: campania_monitoreo_id
+		summarizeBy: sum
+		sourceColumn: campania_monitoreo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column establecimiento_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b311b5f7-3756-4338-abdd-697be8c0cd35
+		sourceLineageTag: establecimiento_id
+		summarizeBy: sum
+		sourceColumn: establecimiento_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column variedad
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d31f1eca-6bdb-4def-8cad-64503212c12a
+		sourceLineageTag: variedad
+		summarizeBy: none
+		sourceColumn: variedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'superficie.1'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 10f3b077-61a9-4342-ae91-e2d3c87c96d5
+		sourceLineageTag: superficie.1
+		summarizeBy: sum
+		sourceColumn: superficie.1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'x LF'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 6d4c8025-bace-4818-bb64-1f0c3ccb0011
+		sourceLineageTag: x LF
+		summarizeBy: sum
+		sourceColumn: x LF
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ton equiv lf'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 2c1bb77e-8cdd-4414-bc1c-3228c46ff2d3
+		sourceLineageTag: ton equiv lf
+		summarizeBy: sum
+		sourceColumn: ton equiv lf
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b09419d6-fbcb-4775-b1c3-3c1821fcbbcf
+		sourceLineageTag: user_id
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: d7685009-aedb-453a-bc62-0630e4fb8450
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: cba3a938-ae5c-44c9-a4bd-86526b770b70
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 275e70d1-adae-44e0-bc91-e7b2dd3e9a4c
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'rinde.1'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 5a91b9b1-cae2-47d6-986a-a15cd09a3c06
+		sourceLineageTag: rinde.1
+		summarizeBy: sum
+		sourceColumn: rinde.1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ton fisicas'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 594e66d9-9c01-4116-a51a-52e834dfca9c
+		sourceLineageTag: ton fisicas
+		summarizeBy: sum
+		sourceColumn: ton fisicas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Volumen y Superficie' = entity
+		mode: directLake
+		source
+			entityName: Volumen y Superficie
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

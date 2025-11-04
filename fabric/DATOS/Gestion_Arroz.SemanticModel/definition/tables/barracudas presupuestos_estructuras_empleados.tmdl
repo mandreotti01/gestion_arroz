@@ -1,0 +1,256 @@
+table 'barracudas presupuestos_estructuras_empleados'
+	lineageTag: 96b119b5-8d96-4a9c-9ac5-53cbade46de5
+	sourceLineageTag: [dbo].[barracudas presupuestos_estructuras_empleados]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 138c3f5b-ca90-4714-a7e5-3222362748e2
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column rrhh_empleado_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 8544a073-2568-4ad8-b500-a8539915c961
+		sourceLineageTag: rrhh_empleado_id
+		summarizeBy: sum
+		sourceColumn: rrhh_empleado_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_estado
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 3dd82781-f668-44e5-9a4b-20a716735e89
+		sourceLineageTag: fecha_estado
+		summarizeBy: none
+		sourceColumn: fecha_estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column convenio
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a0cd4fb2-12a3-4168-b5ec-6a9df6947194
+		sourceLineageTag: convenio
+		summarizeBy: none
+		sourceColumn: convenio
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5e8a2414-59a6-4f9a-ad27-b75ff2ff60e6
+		sourceLineageTag: categoria
+		summarizeBy: none
+		sourceColumn: categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column puesto
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1e62b983-f4ca-4ab0-a2bb-2c26c4f4c052
+		sourceLineageTag: puesto
+		summarizeBy: none
+		sourceColumn: puesto
+
+		annotation SummarizationSetBy = Automatic
+
+	column periodo
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: ae118b86-8c89-4ec6-accd-9a1570029e2c
+		sourceLineageTag: periodo
+		summarizeBy: none
+		sourceColumn: periodo
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: dda85dc0-59fa-4aee-a724-a5a1fb15fd1f
+		sourceLineageTag: user_id
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: db44fa6b-1177-42b1-9824-be6c7cffb897
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 523a4380-2ff8-4759-b552-9d85f859e860
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b1e1063e-8d6b-44ca-b767-cfd59e7b200d
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column centro_costo
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 430c292f-3673-4fba-a412-29c7a8d2cb89
+		sourceLineageTag: centro_costo
+		summarizeBy: none
+		sourceColumn: centro_costo
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: eb282c93-f403-4c33-b225-4f9bc68d28a0
+		sourceLineageTag: campania
+		summarizeBy: none
+		sourceColumn: campania
+
+		annotation SummarizationSetBy = Automatic
+
+	column moneda
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 22bb5b3f-a0a8-4ca1-a46a-4fbd7ae00ea8
+		sourceLineageTag: moneda
+		summarizeBy: sum
+		sourceColumn: moneda
+
+		annotation SummarizationSetBy = Automatic
+
+	column flexflied
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3af08055-d3f8-4311-9579-afcc415acba0
+		sourceLineageTag: flexflied
+		summarizeBy: none
+		sourceColumn: flexflied
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b4960176-4521-4b68-a5ef-6aab8998a4bc
+		sourceLineageTag: mes
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 68b75dea-d58c-4aa1-b972-e2a9dda84490
+		sourceLineageTag: anio
+		summarizeBy: sum
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column reclasificado
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 06e4b798-3dbf-49a5-8177-62051b0fc7eb
+		sourceLineageTag: reclasificado
+		summarizeBy: none
+		sourceColumn: reclasificado
+
+		annotation SummarizationSetBy = Automatic
+
+	column compania
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d0e836c9-2387-4c7e-9bcb-068555c6c85b
+		sourceLineageTag: compania
+		summarizeBy: sum
+		sourceColumn: compania
+
+		annotation SummarizationSetBy = Automatic
+
+	column cuenta
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 1e40edd1-bf08-4754-9ec2-bafe7acfbdc0
+		sourceLineageTag: cuenta
+		summarizeBy: sum
+		sourceColumn: cuenta
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad_negocio
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 20e2ff73-3a90-4198-ba41-a9d645cde4c1
+		sourceLineageTag: unidad_negocio
+		summarizeBy: none
+		sourceColumn: unidad_negocio
+
+		annotation SummarizationSetBy = Automatic
+
+	column producto
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4af61e6c-9d5f-4f4b-8f0b-ee0a7d68db0e
+		sourceLineageTag: producto
+		summarizeBy: none
+		sourceColumn: producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad_productiva
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fb89ed8a-86be-406f-a7d8-02d4dd277155
+		sourceLineageTag: unidad_productiva
+		summarizeBy: none
+		sourceColumn: unidad_productiva
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_estructuras_empleados' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_estructuras_empleados
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

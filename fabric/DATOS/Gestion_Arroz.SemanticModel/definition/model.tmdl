@@ -1,0 +1,59 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+annotation PBI_ProTooling = ["WebModelingEdit","RemoteModeling"]
+
+ref table 'barracudas presupuestos_escenarios_tipos'
+ref table 'barracudas presupuestos_gl_categorias'
+ref table 'barracudas presupuestos_estructuras_productos'
+ref table 'barracudas presupuestos_estructuras_gastos_items'
+ref table 'barracudas presupuestos_estructuras_cuentas'
+ref table 'barracudas  presupuestos_estructuras_companias'
+ref table 'barracudas presupuestos_faltantes'
+ref table 'barracudas presupuestos_estructuras_rubros'
+ref table 'barracudas  presupuestos_estructuras_categorias'
+ref table 'barracudas presupuestos_dosis'
+ref table 'barracudas presupuestos_estructuras_unidades_negocios'
+ref table 'barracudas  presupuestos_estructuras'
+ref table 'barracudas  presupuestos_estructuras_centros_costos'
+ref table 'barracudas presupuestos_listas'
+ref table 'barracudas presupuestos_faltantes_detalles'
+ref table 'barracudas presupuestos'
+ref table 'barracudas presupuestos_estructuras_gastos_detalles'
+ref table 'barracudas presupuestos_estructuras_gastos'
+ref table 'barracudas presupuestos_dosis_detalles'
+ref table 'barracudas presupuestos_gl_conceptos'
+ref table 'barracudas presupuestos_estructuras_empleados'
+ref table 'barracudas presupuestos_reales_detalles'
+ref table 'barracudas presupuestos_reales'
+ref table 'barracudas presupuestos_estructuras_segmentos'
+ref table 'barracudas presupuestos_listas_detalles'
+ref table 'barracudas presupuestos_escenarios'
+ref table 'barracudas presupuestos_detalles'
+ref table Medidas
+ref table Calendario_desconectado
+ref table Calendario
+ref table 'archivo producción'
+ref table 'Periodo Tipo'
+ref table 'archivo jerarquias P&L'
+ref table 'barracudas presupuestos_estructuras_unidades_productivas'
+ref table 'barracudas presupuestos_estructuras_detalles'
+ref table 'barracudas oracle_gls'
+ref table 'barracudas presupuestos_superficies'
+ref table 'barracudas presupuestos_rindes'
+ref table 'Volumen y Superficie'
+ref table Producción
+ref table 'barracudas proyectos'
+ref table 'barracudas establecimientos'
+ref table 'barracudas arroz_variedades'
+

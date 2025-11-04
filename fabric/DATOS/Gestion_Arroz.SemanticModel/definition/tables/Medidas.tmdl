@@ -1,0 +1,117 @@
+table Medidas
+	lineageTag: e02e0409-6403-4b9a-aa62-d3251c973194
+
+	measure fecha_corte_sel =
+			
+			VAR v =
+			    SELECTEDVALUE ( 'Calendario_desconectado'[mes_fin])
+			VAR v_default =
+			    CALCULATE ( MAX ('Calendario_desconectado'[mes_fin]),
+			                REMOVEFILTERS ( 'Calendario_desconectado') )
+			RETURN COALESCE ( v, v_default )
+		formatString: General Date
+		lineageTag: 28bfb8bc-e2ed-40cb-a16c-241520b44f83
+
+	measure version_seleccionada =
+			
+			IF (
+			    HASONEVALUE ( 'barracudas presupuestos_estructuras_detalles'[version] ),
+			    SUM ( 'barracudas presupuestos_estructuras_detalles'[Budget] ),
+			    BLANK ()
+			)
+		lineageTag: aa400824-e47a-4db1-a971-40722acafc9f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure total_usd_ha =
+			
+			DIVIDE ( [total_corte], [Superficie (has)] )
+		lineageTag: 42df19db-9a44-44cf-8490-daf49ecb1186
+
+	measure total_corte =
+			
+			[real_hasta_corte] + [forecast_desde_corte]
+		lineageTag: bf84e876-4e10-4824-a0cc-727e373cc26b
+
+	measure 'Superficie (has)' = SUM('archivo producción'[sup_has])
+		lineageTag: f3676087-2fb1-49b6-818b-1c2d9d99d18d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure real_monto = SUM('barracudas oracle_gls'[usd])
+		lineageTag: e936351a-bc1f-4e95-9b48-953f302a5d83
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure real_hasta_corte =
+			
+			VAR corte = [fecha_corte_sel]
+			RETURN
+			CALCULATE ( [real_monto],
+			           KEEPFILTERS ( 'Calendario'[fecha] <= corte ) )
+		formatString: #,0
+		lineageTag: 870947f6-a104-4b08-8ec1-6617625e81b5
+
+	measure monto_por_tipo_v3 =
+			
+			VAR tipo =
+			    SELECTEDVALUE ( 'Periodo Tipo'[tipo], "Total" )
+			
+			/* Detecta si la celda está en el detalle de periodo (mes/fecha) */
+			VAR es_detalle_periodo =
+			       ISINSCOPE ( 'Calendario'[fecha] )
+			    || ISINSCOPE ( 'Calendario'[mes_fin] )
+			    || ISINSCOPE ( 'Calendario'[anio_mes] )
+			    || ISINSCOPE ( 'Calendario'[anio_mes_num] )
+			    || ISINSCOPE ( 'Calendario'[mes] )
+			    || ISINSCOPE ( 'Calendario'[mes_abrev] )
+			    || ISINSCOPE ( 'Calendario'[mes_nombre] )
+			
+			RETURN
+			SWITCH (
+			    TRUE(),
+			    tipo = "Real",                [real_hasta_corte],
+			    tipo = "Forecast",            [forecast_desde_corte],
+			
+			    /* Solo mostrar el valor en el subtotal del bucket (no por mes) */
+			    tipo = "Total"        && es_detalle_periodo, BLANK(),
+			    tipo = "Total",                                [total_corte],
+			
+			    tipo = "Total usd/ha" && es_detalle_periodo, BLANK(),
+			    tipo = "Total usd/ha",                         [total_usd_ha],
+			    BLANK()
+			)
+		formatString: #,0
+		lineageTag: fcda72ae-51b6-4ec5-bbfc-5d002d2d29f6
+
+	measure forecast_desde_corte =
+			
+			VAR corte = [fecha_corte_sel]
+			RETURN
+			CALCULATE ([version_seleccionada],
+			           KEEPFILTERS ( 'Calendario'[fecha] > corte ) )
+		lineageTag: be752228-4e5e-4fe5-92c8-8e60d99154b2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Medida
+		lineageTag: 02b2c39e-d504-4b04-81d3-b46eb927b339
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
+
+	column Value
+		isHidden
+		formatString: 0
+		lineageTag: 6632067a-436b-4127-8595-0c53eff30a86
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = { 0 }
+
+	annotation PBI_Id = 13b81fd0be8b4d7a87645d02e5488812
+

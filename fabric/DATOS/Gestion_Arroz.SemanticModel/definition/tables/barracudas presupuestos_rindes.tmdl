@@ -1,0 +1,134 @@
+table 'barracudas presupuestos_rindes'
+	lineageTag: f4d4990b-89e1-45c2-b05d-a85ef7f4a3de
+	sourceLineageTag: [dbo].[barracudas presupuestos_rindes]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b1715358-18e6-4e26-a032-94d84e4b2770
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4b3399cb-7e3e-4812-b567-3f46ab95e50f
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania_monitoreo_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d5648a1f-1ff3-48af-9354-d1d95b50a678
+		sourceLineageTag: campania_monitoreo_id
+		summarizeBy: sum
+		sourceColumn: campania_monitoreo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column establecimiento_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3fdbcc29-ae9d-4fdb-bf1c-6a9d5a737e7e
+		sourceLineageTag: establecimiento_id
+		summarizeBy: sum
+		sourceColumn: establecimiento_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuestos_escenarios_tipo_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 48cb006a-27e3-4554-85f6-09a6fe76e457
+		sourceLineageTag: presupuestos_escenarios_tipo_id
+		summarizeBy: sum
+		sourceColumn: presupuestos_escenarios_tipo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column variedad
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5f4a973a-af84-4041-b13f-eda7d8e36ca5
+		sourceLineageTag: variedad
+		summarizeBy: sum
+		sourceColumn: variedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'rinde.1'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: e8859925-a3fe-4a67-b04f-6b2a249977f7
+		sourceLineageTag: rinde.1
+		summarizeBy: sum
+		sourceColumn: rinde.1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 619fd294-cff7-4bb5-ae66-cacde8ed72fa
+		sourceLineageTag: user_id
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 37bc3601-7abb-4088-a534-c0d1c79ea803
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 52762e2d-9e4d-4ec7-b2f0-e959e6d8a1bd
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 45bc867c-8cf7-4c42-8cba-019cea5cc8f2
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_rindes' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_rindes
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

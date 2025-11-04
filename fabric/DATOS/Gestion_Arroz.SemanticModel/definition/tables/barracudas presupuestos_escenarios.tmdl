@@ -1,0 +1,153 @@
+table 'barracudas presupuestos_escenarios'
+	lineageTag: c6dc7a25-a786-4fb2-9606-e8ce7cb9598f
+	sourceLineageTag: [dbo].[barracudas presupuestos_escenarios]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 352b60d9-9519-44a5-b7c8-5f49bc206ef9
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 019843e3-e480-4340-bf87-c862ef2ba7c6
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania_monitoreo_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0ad89212-7796-41dc-8c09-5e969e84bea3
+		sourceLineageTag: campania_monitoreo_id
+		summarizeBy: none
+		sourceColumn: campania_monitoreo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column establecimiento_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d3f28731-f604-4a06-a7fc-5a52a419123e
+		sourceLineageTag: establecimiento_id
+		summarizeBy: none
+		sourceColumn: establecimiento_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sectore_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2bc639d7-d673-40f9-aeb8-3f9c7276f31f
+		sourceLineageTag: sectore_id
+		summarizeBy: none
+		sourceColumn: sectore_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cultivo_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: cc4b34df-8c74-4508-8b74-854a9a2682a8
+		sourceLineageTag: cultivo_id
+		summarizeBy: none
+		sourceColumn: cultivo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 8a4251e6-7b5f-4b34-a601-beeb1357d3aa
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 04ef172b-fad1-4988-9359-ec2e9adfa77f
+		sourceLineageTag: user_id
+		summarizeBy: none
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column rindes
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8cb2af68-b66c-40cd-abdc-63bdf3b213c5
+		sourceLineageTag: rindes
+		summarizeBy: none
+		sourceColumn: rindes
+
+		annotation SummarizationSetBy = Automatic
+
+	column superficies
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 04bbc3ee-a046-437b-898a-df5a65a59e96
+		sourceLineageTag: superficies
+		summarizeBy: none
+		sourceColumn: superficies
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuestos_escenarios_tipo_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0a6f5248-9dbb-4680-b42f-9c605fb68e08
+		sourceLineageTag: presupuestos_escenarios_tipo_id
+		summarizeBy: none
+		sourceColumn: presupuestos_escenarios_tipo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 3f91490b-3e8b-43df-95ec-32b2a1aa37ec
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 5159c8ec-a6a1-4881-865a-77905d95349e
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_escenarios' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_escenarios
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

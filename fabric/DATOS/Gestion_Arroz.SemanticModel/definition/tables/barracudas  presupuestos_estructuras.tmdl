@@ -1,0 +1,144 @@
+table 'barracudas  presupuestos_estructuras'
+	lineageTag: 5c623108-dec9-46ec-b18d-af66796f2ef9
+	sourceLineageTag: [dbo].[barracudas  presupuestos_estructuras]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 4134aa61-d39c-46fe-bc32-5d02ca6ed524
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c1de0250-62b4-4579-acf8-45593aed0f8e
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column parent_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 69d82c8d-b8d7-490a-8af4-087c3b841fcd
+		sourceLineageTag: parent_id
+		summarizeBy: sum
+		sourceColumn: parent_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column moneda_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e91448a8-c5b1-4bff-bfa1-2ee067fca455
+		sourceLineageTag: moneda_id
+		summarizeBy: sum
+		sourceColumn: moneda_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column periodo_desde
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 09dc0e7d-c38f-4fe3-918b-9c137999c983
+		sourceLineageTag: periodo_desde
+		summarizeBy: none
+		sourceColumn: periodo_desde
+
+		annotation SummarizationSetBy = Automatic
+
+	column periodo_hasta
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: f07bc8d8-62e0-4c02-8873-fb9f73ebfb81
+		sourceLineageTag: periodo_hasta
+		summarizeBy: none
+		sourceColumn: periodo_hasta
+
+		annotation SummarizationSetBy = Automatic
+
+	column version
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7f05fe2b-191f-41c3-a054-8a95ce97e5b9
+		sourceLineageTag: version
+		summarizeBy: sum
+		sourceColumn: version
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b698c034-a147-45a7-88cf-60fe46e26f47
+		sourceLineageTag: estado
+		summarizeBy: sum
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 4807a59c-ed1c-4cfd-ac6a-eb5baa50641f
+		sourceLineageTag: user_id
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 9db17ab0-67ff-4e17-8796-cde304dae481
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 8c10d6e6-9167-4a03-acd4-3afd76476e5e
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f5d431ca-80ab-4e4f-864a-3a6ccf8e94dd
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas  presupuestos_estructuras' = entity
+		mode: directLake
+		source
+			entityName: barracudas  presupuestos_estructuras
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

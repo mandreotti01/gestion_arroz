@@ -1,0 +1,468 @@
+table Calendario
+	lineageTag: fbc6838f-fa39-4a8d-aa92-9c89af28990e
+	sourceLineageTag: [dbo].[Calendario]
+
+	column mes_anno_label
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cb2f526c-d0bd-432a-bf06-0973462fa552
+		sourceLineageTag: mes_anno_label
+		summarizeBy: none
+		sourceColumn: mes_anno_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_hoy
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: e10ef414-2c8e-4711-8aca-296c6d52ead0
+		sourceLineageTag: es_hoy
+		summarizeBy: none
+		sourceColumn: es_hoy
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_mes_actual
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: d6c7c436-4d3d-481f-83bf-57bf61d6c87c
+		sourceLineageTag: es_mes_actual
+		summarizeBy: none
+		sourceColumn: es_mes_actual
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_anio_actual
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 65121c04-85a7-4bec-907d-9068529e5db8
+		sourceLineageTag: es_anio_actual
+		summarizeBy: none
+		sourceColumn: es_anio_actual
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio_iso
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 592ac4e9-19b9-412e-b082-257cc95caa00
+		sourceLineageTag: anio_iso
+		summarizeBy: sum
+		sourceColumn: anio_iso
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio_semana_iso
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 91f5c913-e0ae-4f57-89f1-eeb918e5a2e6
+		sourceLineageTag: anio_semana_iso
+		summarizeBy: none
+		sourceColumn: anio_semana_iso
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio_inicio
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 4dd3c8b1-a238-47b5-ae80-50ac6b36990b
+		sourceLineageTag: anio_inicio
+		summarizeBy: none
+		sourceColumn: anio_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio_fin
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: fed131c2-3660-453b-b2ef-1e14cb55a96b
+		sourceLineageTag: anio_fin
+		summarizeBy: none
+		sourceColumn: anio_fin
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio_mes
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e9ba7a5c-ef26-4188-b2ec-fd2487d0b143
+		sourceLineageTag: anio_mes
+		summarizeBy: none
+		sourceColumn: anio_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio_mes_num
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: aa82ae31-10a4-4d43-8f61-2ac2b591c1c7
+		sourceLineageTag: anio_mes_num
+		summarizeBy: sum
+		sourceColumn: anio_mes_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana_abrev
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0afae304-4482-4758-8c54-1331c169173e
+		sourceLineageTag: dia_semana_abrev
+		summarizeBy: none
+		sourceColumn: dia_semana_abrev
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_fin_de_semana
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 587e6d5e-20d3-4f4e-bf1a-338db558e21a
+		sourceLineageTag: es_fin_de_semana
+		summarizeBy: none
+		sourceColumn: es_fin_de_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_dia_habil
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 57d0aa29-a6f6-435d-aa8b-00067deff3bd
+		sourceLineageTag: es_dia_habil
+		summarizeBy: none
+		sourceColumn: es_dia_habil
+
+		annotation SummarizationSetBy = Automatic
+
+	column semana_inicio
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 6fc1a8a8-3f95-4d7a-9a2a-d42a7e910260
+		sourceLineageTag: semana_inicio
+		summarizeBy: none
+		sourceColumn: semana_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column semana_fin
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 0affb9ee-7512-4004-b176-847f34ec8632
+		sourceLineageTag: semana_fin
+		summarizeBy: none
+		sourceColumn: semana_fin
+
+		annotation SummarizationSetBy = Automatic
+
+	column semana_iso
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 57e0def3-1498-4c2b-8fe1-71cd9963a0e7
+		sourceLineageTag: semana_iso
+		summarizeBy: sum
+		sourceColumn: semana_iso
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_inicio
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 2b5bce85-d78c-49cd-acd5-ef7a386bf08c
+		sourceLineageTag: mes_inicio
+		summarizeBy: none
+		sourceColumn: mes_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_fin
+		dataType: dateTime
+		formatString: Short Date
+		sourceProviderType: date
+		lineageTag: 5f597653-9a9b-404c-b5e3-e391cfe1f90a
+		sourceLineageTag: mes_fin
+		summarizeBy: none
+		sourceColumn: mes_fin
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: a2a3dbf8-3b11-468d-b4d3-c39fe0c7822c
+		sourceLineageTag: dia
+		summarizeBy: sum
+		sourceColumn: dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_del_anio
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7959b6e4-51e0-4ef0-9a2b-0d27c1076e71
+		sourceLineageTag: dia_del_anio
+		summarizeBy: sum
+		sourceColumn: dia_del_anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana_num
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: f16b3df3-4945-4a97-9957-903861da2de9
+		sourceLineageTag: dia_semana_num
+		summarizeBy: sum
+		sourceColumn: dia_semana_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana_nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0b9e257f-b1c5-4fc2-b6ed-e209a48e7772
+		sourceLineageTag: dia_semana_nombre
+		summarizeBy: none
+		sourceColumn: dia_semana_nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre_label
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 61fcc905-5122-4e85-8e67-c043c4511864
+		sourceLineageTag: trimestre_label
+		summarizeBy: none
+		sourceColumn: trimestre_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre_inicio
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 1c96deab-9dba-432c-8715-7bebdfcfaafb
+		sourceLineageTag: trimestre_inicio
+		summarizeBy: none
+		sourceColumn: trimestre_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre_fin
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 6a1d8d1a-5631-4d90-8cca-8b72028cbbbf
+		sourceLineageTag: trimestre_fin
+		summarizeBy: none
+		sourceColumn: trimestre_fin
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: f60251ff-cb44-4a2c-8d58-164aec556839
+		sourceLineageTag: mes
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1ce88cea-7e76-4300-91df-0fe38bb912cd
+		sourceLineageTag: mes_nombre
+		summarizeBy: none
+		sourceColumn: mes_nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_abrev
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d95154b0-cee8-4565-b115-fd81ddcc6d45
+		sourceLineageTag: mes_abrev
+		summarizeBy: none
+		sourceColumn: mes_abrev
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania_orden
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d60f99ba-0439-4849-afb4-8a46ceb58c1e
+		sourceLineageTag: campania_orden
+		summarizeBy: sum
+		sourceColumn: campania_orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7f6f29b9-30bc-452d-bfed-9f34e52ad483
+		sourceLineageTag: anio
+		summarizeBy: sum
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio_corto
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: aa17c444-111d-4c57-9db9-b1a5aa92a733
+		sourceLineageTag: anio_corto
+		summarizeBy: sum
+		sourceColumn: anio_corto
+
+		annotation SummarizationSetBy = Automatic
+
+	column semestre
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5e6fb59b-edfa-4489-a091-a152ab743a10
+		sourceLineageTag: semestre
+		summarizeBy: sum
+		sourceColumn: semestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column semestre_label
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 24388513-525f-4784-bcd1-e6e1ead0200f
+		sourceLineageTag: semestre_label
+		summarizeBy: none
+		sourceColumn: semestre_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: db455a1a-6f51-49f6-b76d-3cf1544c149e
+		sourceLineageTag: trimestre
+		summarizeBy: sum
+		sourceColumn: trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3ab5944a-50a2-4680-b149-ec6f1852136b
+		sourceLineageTag: campania
+		summarizeBy: none
+		sourceColumn: campania
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania_periodo
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f2d0f28f-814e-4612-b341-41c0f0b7075d
+		sourceLineageTag: campania_periodo
+		summarizeBy: none
+		sourceColumn: campania_periodo
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania_anio_inicio
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7c33d333-c99f-4795-becd-32a7bd7d8a6b
+		sourceLineageTag: campania_anio_inicio
+		summarizeBy: sum
+		sourceColumn: campania_anio_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania_anio_fin
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: f170705c-64a4-4b91-b3d8-8faeac1941df
+		sourceLineageTag: campania_anio_fin
+		summarizeBy: sum
+		sourceColumn: campania_anio_fin
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania_inicio
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: e7dcf837-96ce-4244-aec9-2bdec3f1d5a3
+		sourceLineageTag: campania_inicio
+		summarizeBy: none
+		sourceColumn: campania_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania_fin
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 311a74a0-bb85-4b65-b723-cceb30cd113a
+		sourceLineageTag: campania_fin
+		summarizeBy: none
+		sourceColumn: campania_fin
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		formatString: Short Date
+		sourceProviderType: date
+		lineageTag: 90ee7bad-a6dd-4232-8446-33deb13a81b5
+		sourceLineageTag: fecha
+		summarizeBy: none
+		sourceColumn: fecha
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e57f63eb-53cd-4316-bb2f-bbe9f2e64a3c
+		sourceLineageTag: fecha_key
+		summarizeBy: sum
+		sourceColumn: fecha_key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = entity
+		mode: directLake
+		source
+			entityName: Calendario
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

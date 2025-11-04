@@ -1,0 +1,126 @@
+table 'archivo producción'
+	lineageTag: 0cfa943b-2ae1-4877-9243-ddd9a7e26d6c
+	sourceLineageTag: [dbo].[archivo producción]
+
+	column rinde_fisico
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 6ef54a4e-26bd-431d-91fe-532c88698b29
+		sourceLineageTag: rinde_fisico
+		summarizeBy: sum
+		sourceColumn: rinde_fisico
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column rinde_equiv_lf
+		dataType: double
+		sourceProviderType: float
+		lineageTag: dd59f481-4ce2-4105-ac2f-da76111f1c3b
+		sourceLineageTag: rinde_equiv_lf
+		summarizeBy: sum
+		sourceColumn: rinde_equiv_lf
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ton_fisicas
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 9a2aaa63-e486-4c03-a358-7bc6fecfd0e8
+		sourceLineageTag: ton_fisicas
+		summarizeBy: sum
+		sourceColumn: ton_fisicas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ton_equiv_lf
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 15f0b970-0cf3-4b15-816d-74493b886dde
+		sourceLineageTag: ton_equiv_lf
+		summarizeBy: sum
+		sourceColumn: ton_equiv_lf
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UP
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0ba14624-863b-4284-b485-7e19d00ea9e5
+		sourceLineageTag: UP
+		summarizeBy: none
+		sourceColumn: UP
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unidad Productiva'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 802a6452-df33-4124-bb5f-edb0f5efbc57
+		sourceLineageTag: Unidad Productiva
+		summarizeBy: none
+		sourceColumn: Unidad Productiva
+
+		annotation SummarizationSetBy = Automatic
+
+	column Camp_
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 32acf245-cef7-4b37-80f7-655f164541e4
+		sourceLineageTag: Camp_
+		summarizeBy: none
+		sourceColumn: Camp_
+
+		annotation SummarizationSetBy = Automatic
+
+	column Escenario
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fe2ab1ca-6bbf-4e29-bfd2-d8ccf1689078
+		sourceLineageTag: Escenario
+		summarizeBy: none
+		sourceColumn: Escenario
+
+		annotation SummarizationSetBy = Automatic
+
+	column sup_has
+		dataType: double
+		sourceProviderType: float
+		lineageTag: ae89b8ba-1165-4c1e-9a10-e0ec9784a6ad
+		sourceLineageTag: sup_has
+		summarizeBy: sum
+		sourceColumn: sup_has
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column factor
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 29b278dc-acd8-420a-91dd-ba753936b73c
+		sourceLineageTag: factor
+		summarizeBy: sum
+		sourceColumn: factor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'archivo producción' = entity
+		mode: directLake
+		source
+			entityName: archivo producción
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,165 @@
+table 'barracudas presupuestos_dosis'
+	lineageTag: 269291a5-5c1b-4c67-92fb-25f912fbed77
+	sourceLineageTag: [dbo].[barracudas presupuestos_dosis]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: af1f8be5-ec26-4956-ae6f-f0a924656e80
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0253023c-80f1-4993-ab73-cffb7bfc3ec7
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 673e6ce5-bc69-41aa-9b97-efff4d8435ae
+		sourceLineageTag: fecha
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	column establecimiento_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 9f4deb42-8983-4f72-9c3c-2650be22e6cd
+		sourceLineageTag: establecimiento_id
+		summarizeBy: sum
+		sourceColumn: establecimiento_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sectore_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 486a3339-cdf0-4824-8adb-6e3c45b4fb1b
+		sourceLineageTag: sectore_id
+		summarizeBy: sum
+		sourceColumn: sectore_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cultivos_grano_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6f45a82d-0fc0-45d8-9f4c-e09c8a3ef32a
+		sourceLineageTag: cultivos_grano_id
+		summarizeBy: sum
+		sourceColumn: cultivos_grano_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: ef2f4c5a-1ebc-4f45-bd59-cc17fe8c8080
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: a82aa8d4-feb5-43ba-bad0-6c9a175ba19d
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column cultivo_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: a88f3e08-e22a-4b90-9ca9-da291b99e737
+		sourceLineageTag: cultivo_id
+		summarizeBy: sum
+		sourceColumn: cultivo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column arroz_variedade_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e1642c67-c477-46a5-a5fd-122c254515c0
+		sourceLineageTag: arroz_variedade_id
+		summarizeBy: sum
+		sourceColumn: arroz_variedade_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_lista
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: debfbada-724c-4c9a-a3e5-6720cd959d45
+		sourceLineageTag: tipo_lista
+		summarizeBy: sum
+		sourceColumn: tipo_lista
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 47741ee4-b8e1-46fd-b9e3-7deb1ce7e5c1
+		sourceLineageTag: user_id
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column observaciones
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 861da490-9c12-4259-874a-611a6fd9b550
+		sourceLineageTag: observaciones
+		summarizeBy: none
+		sourceColumn: observaciones
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 3292411f-d176-4324-a2b8-9702f793509b
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_dosis' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_dosis
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

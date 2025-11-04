@@ -1,0 +1,216 @@
+table 'barracudas presupuestos_reales_detalles'
+	lineageTag: 4ef9743a-de95-471d-a9a4-baf6ebc3e4fa
+	sourceLineageTag: [dbo].[barracudas presupuestos_reales_detalles]
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f08b819d-ce54-4d2a-ac06-ec84b49f95a7
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column cantidad
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 9578bdc4-e5db-4f85-871b-c2c9f9d4e4f1
+		sourceLineageTag: cantidad
+		summarizeBy: sum
+		sourceColumn: cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column precio
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 4767960f-4537-4cfc-8d6c-6971d5b03908
+		sourceLineageTag: precio
+		summarizeBy: sum
+		sourceColumn: precio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6213f929-40a3-4521-a238-df608ddd4b63
+		sourceLineageTag: user_id
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidade_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 35899ae3-a0b0-4b6f-8334-35fa281ad4c4
+		sourceLineageTag: unidade_id
+		summarizeBy: sum
+		sourceColumn: unidade_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 259fa0cf-e6a3-4f49-bf7e-ebf741be2c6f
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 9036606c-ea6c-4c53-9ea2-7afbfcb2355f
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column cultivo_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 66025618-6248-409d-9b96-bf29b1e3da62
+		sourceLineageTag: cultivo_id
+		summarizeBy: sum
+		sourceColumn: cultivo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column flete_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 091688c3-ae15-4b97-ad71-e933d717d3b5
+		sourceLineageTag: flete_id
+		summarizeBy: sum
+		sourceColumn: flete_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column alquilere_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0fc9f795-13b3-4155-aee5-84ff64f3d7ba
+		sourceLineageTag: alquilere_id
+		summarizeBy: sum
+		sourceColumn: alquilere_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column superficie
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 394a5e12-38cb-4d1a-a1f9-d5a147cb846f
+		sourceLineageTag: superficie
+		summarizeBy: sum
+		sourceColumn: superficie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column dosis
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 1151dd99-2b0d-452e-8668-75f96a7360e1
+		sourceLineageTag: dosis
+		summarizeBy: sum
+		sourceColumn: dosis
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column uta
+		dataType: double
+		sourceProviderType: float
+		lineageTag: e5b9447e-e669-4d24-b960-feab07144049
+		sourceLineageTag: uta
+		summarizeBy: sum
+		sourceColumn: uta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 039bcc9e-f58a-45ec-894e-884221450d01
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuestos_reale_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b5cc03d1-98d8-4dbc-b717-840ce7a1a66a
+		sourceLineageTag: presupuestos_reale_id
+		summarizeBy: sum
+		sourceColumn: presupuestos_reale_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column proyectos_tarea_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 253d47f8-3184-4097-82cf-498542919a6c
+		sourceLineageTag: proyectos_tarea_id
+		summarizeBy: sum
+		sourceColumn: proyectos_tarea_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column producto_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: cf0258ca-8864-4117-b556-765e5897e27d
+		sourceLineageTag: producto_id
+		summarizeBy: sum
+		sourceColumn: producto_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cultivos_grano_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 4d9c162e-ba87-4a21-924a-1e8f42d7eb52
+		sourceLineageTag: cultivos_grano_id
+		summarizeBy: sum
+		sourceColumn: cultivos_grano_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_reales_detalles' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_reales_detalles
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

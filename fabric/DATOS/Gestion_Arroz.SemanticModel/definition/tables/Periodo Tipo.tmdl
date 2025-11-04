@@ -1,0 +1,38 @@
+table 'Periodo Tipo'
+	lineageTag: dc11abab-c56a-4801-b0cc-9904663cafe4
+
+	column tipo
+		lineageTag: 7908c1f7-c849-476f-a2a5-7c1a965dd7ad
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [tipo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		formatString: 0
+		lineageTag: d52ddbe9-84c2-4ba6-9c72-16944ab54294
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [orden]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Periodo Tipo' = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE (
+				    "tipo", STRING, "orden", INTEGER,
+				    {
+				      { "Real", 1 },
+				      { "Forecast", 2 },
+				      { "Total", 3 },
+				      { "Total usd/ha", 4 }
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = 2801dc38c53e4a00b54326b970224754
+

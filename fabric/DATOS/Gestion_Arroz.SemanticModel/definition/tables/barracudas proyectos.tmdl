@@ -1,0 +1,76 @@
+table 'barracudas proyectos'
+	lineageTag: 8f4c1867-0b79-4c80-b55b-9972d4047c3b
+	sourceLineageTag: [dbo].[barracudas proyectos]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b335bb5c-642f-4b9a-aa71-3cb5188a7c46
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bb887349-34eb-4b8c-b95e-8b9288a3a5c0
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column establecimiento_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: f0fb7cde-f514-4bac-bbbc-097899d53f79
+		sourceLineageTag: establecimiento_id
+		summarizeBy: none
+		sourceColumn: establecimiento_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania_monitoreo_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6a4ce276-92d7-416b-87c7-b329f9012142
+		sourceLineageTag: campania_monitoreo_id
+		summarizeBy: sum
+		sourceColumn: campania_monitoreo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column segmento
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7c29ec37-b67e-4d58-a085-fcc5b19819d2
+		sourceLineageTag: segmento
+		summarizeBy: none
+		sourceColumn: segmento
+
+		annotation SummarizationSetBy = Automatic
+
+	column cultivo
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a7a86f18-1e57-423b-a1fb-2279bf8da557
+		sourceLineageTag: cultivo
+		summarizeBy: none
+		sourceColumn: cultivo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas proyectos' = entity
+		mode: directLake
+		source
+			entityName: barracudas proyectos
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

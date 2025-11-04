@@ -1,0 +1,89 @@
+table 'barracudas arroz_variedades'
+	lineageTag: 139ffd0b-4d91-45cd-888f-22286bc777d7
+	sourceLineageTag: [dbo].[barracudas arroz_variedades]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: a49e4e99-d1ff-4cb1-af6d-83767288bc28
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Variedad
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c8a51218-f6b2-4e11-a040-f89c1ed23e4b
+		sourceLineageTag: Variedad
+		summarizeBy: none
+		sourceColumn: Variedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column coeficiente
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 17bc34a7-6742-4931-a68f-f854b1dbc346
+		sourceLineageTag: coeficiente
+		summarizeBy: none
+		sourceColumn: coeficiente
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: bafbe239-7cdf-46e0-a679-3c92da77649b
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo de Grano'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: afd055e1-72cd-4541-a203-cf072e0bec11
+		sourceLineageTag: Tipo de Grano
+		summarizeBy: none
+		sourceColumn: Tipo de Grano
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Variedad Cosecha'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cbb88b3d-0488-4c45-abce-c7dbb0db5194
+		sourceLineageTag: Variedad Cosecha
+		summarizeBy: none
+		sourceColumn: Variedad Cosecha
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'x LF'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: af087b6c-31e3-4eee-a001-555f128be848
+		sourceLineageTag: x LF
+		summarizeBy: none
+		sourceColumn: x LF
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'barracudas arroz_variedades' = entity
+		mode: directLake
+		source
+			entityName: barracudas arroz_variedades
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,82 @@
+relationship 9e879b45-b53a-1c5a-4ea2-0867906b1041
+	toCardinality: many
+	fromColumn: 'archivo producción'.Camp_
+	toColumn: Calendario.campania
+
+relationship b90fbe08-2be4-5935-3bd5-b12afd32b54f
+	fromColumn: 'barracudas oracle_gls'.Combinada
+	toColumn: 'archivo jerarquias P&L'.Combinada
+
+relationship 45266108-f8c8-8e4c-7d2f-7c074b6da655
+	fromColumn: 'barracudas presupuestos_estructuras_detalles'.Combinada
+	toColumn: 'archivo jerarquias P&L'.Combinada
+
+relationship d8f11fc7-8931-a863-8860-906410145793
+	fromColumn: 'barracudas oracle_gls'.cta
+	toColumn: 'barracudas presupuestos_estructuras_cuentas'.id
+
+relationship b2648929-ca26-9fe0-1309-bb65e7783294
+	fromColumn: 'barracudas presupuestos_estructuras_detalles'.cuenta
+	toColumn: 'barracudas presupuestos_estructuras_cuentas'.id
+
+relationship 9fdfd8eb-ddf3-2bb6-406f-866226f37ab9
+	fromColumn: 'barracudas oracle_gls'.un
+	toColumn: 'barracudas presupuestos_estructuras_unidades_negocios'.id
+
+relationship 7faf264e-5adb-85a6-eeba-2e313e065739
+	fromColumn: 'barracudas presupuestos_estructuras_detalles'.unidad_negocio
+	toColumn: 'barracudas presupuestos_estructuras_unidades_negocios'.id
+
+relationship 20de7840-6acf-cd3f-384b-a9a2f8d05d24
+	fromColumn: 'barracudas presupuestos_estructuras_detalles'.centro_costo
+	toColumn: 'barracudas  presupuestos_estructuras_centros_costos'.id
+
+relationship b544af95-5580-0830-786b-b6ff96a9f205
+	fromColumn: 'barracudas oracle_gls'.cc
+	toColumn: 'barracudas  presupuestos_estructuras_centros_costos'.id
+
+relationship ceea5d72-fc12-f8a6-e6ef-da82e545b26f
+	fromColumn: 'barracudas oracle_gls'.up
+	toColumn: 'barracudas presupuestos_estructuras_unidades_productivas'.id
+
+relationship e525acdc-ddcc-cbfb-6dd9-ca6da826527e
+	fromColumn: 'barracudas presupuestos_estructuras_detalles'.unidad_productiva
+	toColumn: 'barracudas presupuestos_estructuras_unidades_productivas'.id
+
+relationship 5e54e313-ac03-925b-4278-0dbbeba2cb2c
+	fromColumn: 'barracudas oracle_gls'.fecha
+	toColumn: Calendario.fecha
+
+relationship f777d813-c96c-21cb-51db-20c7caa4ae9a
+	fromColumn: 'barracudas presupuestos_estructuras_detalles'.periodo
+	toColumn: Calendario.fecha
+
+relationship c769f731-0339-bc66-e45a-4fdc07339b01
+	fromColumn: 'archivo producción'.UP
+	toColumn: 'barracudas presupuestos_estructuras_unidades_productivas'.id
+
+relationship 210c41dd-b36c-d157-0ada-f6ba58f94e8c
+	toCardinality: many
+	fromColumn: 'Volumen y Superficie'.id
+	toColumn: 'barracudas presupuestos'.presupuestos_superficie_id
+
+relationship a5d3f95c-29f3-9856-3cbf-c7d83f11824e
+	fromColumn: 'barracudas presupuestos'.proyecto_id
+	toColumn: 'barracudas proyectos'.id
+
+relationship 7983630b-4990-11a8-89c9-f647539e9dc9
+	fromColumn: 'barracudas proyectos'.establecimiento_id
+	toColumn: 'barracudas establecimientos'.id
+
+relationship cedec9e8-e458-2698-f8ed-c68eca6c5d6a
+	fromColumn: 'barracudas establecimientos'.up
+	toColumn: 'barracudas presupuestos_estructuras_unidades_productivas'.id
+
+relationship fd3d37cc-b640-f842-b3a4-77eabff3228a
+	fromColumn: 'Volumen y Superficie'.variedad
+	toColumn: 'barracudas arroz_variedades'.id
+
+relationship 2006804b-bfa7-dbfd-053f-16987f1b826b
+	fromColumn: 'barracudas presupuestos'.presupuestos_escenario_id
+	toColumn: 'barracudas presupuestos_escenarios'.id
+

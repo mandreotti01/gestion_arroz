@@ -1,0 +1,114 @@
+table 'barracudas presupuestos_dosis_detalles'
+	lineageTag: f1cc2b91-62b9-4510-aee6-18009dfb7208
+	sourceLineageTag: [dbo].[barracudas presupuestos_dosis_detalles]
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 61d22df1-fd1d-4939-a6d3-2ccc730ddad6
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column producto_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5e1b0031-1368-4653-98b4-fedbb3b51a71
+		sourceLineageTag: producto_id
+		summarizeBy: sum
+		sourceColumn: producto_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column proyectos_tarea_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 47d30ec8-015d-4a94-b2ca-33aff60aad69
+		sourceLineageTag: proyectos_tarea_id
+		summarizeBy: sum
+		sourceColumn: proyectos_tarea_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column dosis
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 4ef07a31-316d-442d-a2cd-f11e0f03be18
+		sourceLineageTag: dosis
+		summarizeBy: sum
+		sourceColumn: dosis
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column uta
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 61bfc8c3-0ede-49db-9db3-c05e3e78b644
+		sourceLineageTag: uta
+		summarizeBy: sum
+		sourceColumn: uta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: a8b68017-9a9a-4455-a6a0-72a203ee1ead
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: ed757181-6305-4bb3-b3a4-53f6839033ff
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b812d486-ce7a-4087-825a-f2645210039f
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuestos_dosi_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 63d2af55-d566-43ae-9629-0632644fd0b3
+		sourceLineageTag: presupuestos_dosi_id
+		summarizeBy: sum
+		sourceColumn: presupuestos_dosi_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_dosis_detalles' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_dosis_detalles
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

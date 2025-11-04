@@ -1,0 +1,291 @@
+table 'barracudas presupuestos_estructuras_detalles'
+	lineageTag: b23468b4-6473-40e3-a58b-6c245c1fc02e
+	sourceLineageTag: [dbo].[barracudas presupuestos_estructuras_detalles]
+
+	column Combinada
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 11f625a4-6ef4-4b18-8dcb-1ce2149a1f21
+		sourceLineageTag: Combinada
+		summarizeBy: none
+		sourceColumn: Combinada
+
+		annotation SummarizationSetBy = Automatic
+
+	column version
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 59978aae-92f6-4e50-97fb-90d0e3fa966f
+		sourceLineageTag: version
+		summarizeBy: sum
+		sourceColumn: version
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b42a96c3-0a9a-49b1-9c42-d5a235534f84
+		sourceLineageTag: estado
+		summarizeBy: sum
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e618277f-18f9-4711-9a2b-28d0de2fa290
+		sourceLineageTag: user_id
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 8072a453-99f1-42c0-962a-e3fcf49fd5a5
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 088ff90c-8de2-4154-9380-f450b1d436de
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: edfe8dc9-2406-4e88-b5c9-93e5ef9fda65
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 63ef60f4-5185-4c68-b738-515b4e4af552
+		sourceLineageTag: anio
+		summarizeBy: sum
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column periodo
+		dataType: dateTime
+		formatString: Short Date
+		sourceProviderType: date
+		lineageTag: 009d3d98-b667-4f29-abdd-8fd497ccf782
+		sourceLineageTag: periodo
+		summarizeBy: none
+		sourceColumn: periodo
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+	column budget
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 4960d388-900b-4962-b6e1-a6fd96933c17
+		sourceLineageTag: budget
+		summarizeBy: sum
+		sourceColumn: budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column forecast
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 990f0abd-d46f-4725-ac4a-2eb19439ea33
+		sourceLineageTag: forecast
+		summarizeBy: sum
+		sourceColumn: forecast
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cantidad
+		dataType: double
+		sourceProviderType: float
+		lineageTag: e24abf52-772b-4dae-8ff8-226b60b63ec2
+		sourceLineageTag: cantidad
+		summarizeBy: sum
+		sourceColumn: cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column precio
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 7d0d65f7-ddbf-4968-aa22-52f529be7a81
+		sourceLineageTag: precio
+		summarizeBy: sum
+		sourceColumn: precio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column unidad_productiva
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 97bdccee-a12f-4f72-baf6-893d968b1619
+		sourceLineageTag: unidad_productiva
+		summarizeBy: none
+		sourceColumn: unidad_productiva
+
+		annotation SummarizationSetBy = Automatic
+
+	column centro_costo
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 92a0c673-4172-401a-8001-c1f9e153179a
+		sourceLineageTag: centro_costo
+		summarizeBy: none
+		sourceColumn: centro_costo
+
+		annotation SummarizationSetBy = Automatic
+
+	column campania
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 89a713df-51fb-487d-8020-1450eb87a4ac
+		sourceLineageTag: campania
+		summarizeBy: none
+		sourceColumn: campania
+
+		annotation SummarizationSetBy = Automatic
+
+	column moneda
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 8e39777a-0f0f-4dbe-9531-75fbb471e093
+		sourceLineageTag: moneda
+		summarizeBy: sum
+		sourceColumn: moneda
+
+		annotation SummarizationSetBy = Automatic
+
+	column flexflied
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5bd953cf-1bc5-4449-963a-d7cc3089614f
+		sourceLineageTag: flexflied
+		summarizeBy: none
+		sourceColumn: flexflied
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3c76255f-9a75-4061-9a55-01e8e2f01bd9
+		sourceLineageTag: mes
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c2532556-e76e-4116-bee4-a43ed34b34e5
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuestos_estructura_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d3ac5b1a-b9ae-48ba-822c-e4e8e3080c30
+		sourceLineageTag: presupuestos_estructura_id
+		summarizeBy: sum
+		sourceColumn: presupuestos_estructura_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column compania
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 841452e4-fb2c-4756-aabf-c870e1acd60d
+		sourceLineageTag: compania
+		summarizeBy: sum
+		sourceColumn: compania
+
+		annotation SummarizationSetBy = Automatic
+
+	column cuenta
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2a540c82-a3d3-4b6c-b2cb-c66b8cffa6d3
+		sourceLineageTag: cuenta
+		summarizeBy: none
+		sourceColumn: cuenta
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad_negocio
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7e595ece-29bb-4d9a-b367-996c2172f93d
+		sourceLineageTag: unidad_negocio
+		summarizeBy: none
+		sourceColumn: unidad_negocio
+
+		annotation SummarizationSetBy = Automatic
+
+	column producto
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 1d0baec2-717a-42bc-9d16-52e90230963e
+		sourceLineageTag: producto
+		summarizeBy: sum
+		sourceColumn: producto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_estructuras_detalles' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_estructuras_detalles
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,78 @@
+table 'barracudas presupuestos_estructuras_cuentas'
+	lineageTag: 41f55f5b-fd18-4836-9347-0f49d3f10d90
+	sourceLineageTag: [dbo].[barracudas presupuestos_estructuras_cuentas]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 382ad05e-53e1-4c34-bc28-b6dca59109c0
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0002d1e3-25a9-4247-b972-ce45db0dd1dd
+		sourceLineageTag: nombre
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column mostrar_calculo
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b5a44516-a922-4955-9cd6-d883da953e4b
+		sourceLineageTag: mostrar_calculo
+		summarizeBy: sum
+		sourceColumn: mostrar_calculo
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 1c9dafb4-07cc-4052-a20e-a44c12ac21cf
+		sourceLineageTag: created
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 80454ffe-a141-42bb-97c0-ef0cac7aa80a
+		sourceLineageTag: modified
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column deleted
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 271e3f91-3c8c-4955-851c-d69810c035b8
+		sourceLineageTag: deleted
+		summarizeBy: none
+		sourceColumn: deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'barracudas presupuestos_estructuras_cuentas' = entity
+		mode: directLake
+		source
+			entityName: barracudas presupuestos_estructuras_cuentas
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
