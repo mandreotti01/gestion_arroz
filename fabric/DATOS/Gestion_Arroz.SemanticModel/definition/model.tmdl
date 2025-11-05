@@ -49,11 +49,9 @@ ref table 'archivo jerarquias P&L'
 ref table 'barracudas presupuestos_estructuras_unidades_productivas'
 ref table 'barracudas presupuestos_estructuras_detalles'
 ref table 'barracudas oracle_gls'
-ref table 'barracudas presupuestos_superficies'
-ref table 'barracudas presupuestos_rindes'
-ref table 'Volumen y Superficie'
 ref table Producción
 ref table 'barracudas proyectos'
 ref table 'barracudas establecimientos'
 ref table 'barracudas arroz_variedades'
+ref table 'superficie y volumen'
 

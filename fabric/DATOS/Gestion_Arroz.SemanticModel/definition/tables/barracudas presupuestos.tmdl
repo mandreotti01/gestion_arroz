@@ -8,7 +8,7 @@ table 'barracudas presupuestos'
 		sourceProviderType: bigint
 		lineageTag: fab09804-3f97-409b-a358-e79927a2750a
 		sourceLineageTag: id
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: id
 
 		annotation SummarizationSetBy = Automatic
@@ -231,7 +231,7 @@ table 'barracudas presupuestos'
 		sourceProviderType: bigint
 		lineageTag: 680e65f5-9410-47ca-b295-591f50058852
 		sourceLineageTag: presupuestos_superficie_id
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: presupuestos_superficie_id
 
 		annotation SummarizationSetBy = Automatic

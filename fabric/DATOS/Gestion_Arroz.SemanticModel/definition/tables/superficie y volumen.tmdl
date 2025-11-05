@@ -1,0 +1,117 @@
+table 'superficie y volumen'
+	lineageTag: 99ffda79-c02b-4df9-803e-026f01b3dffb
+	sourceLineageTag: [dbo].[superficie y volumen]
+
+	column id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 781288ac-29a4-4070-8934-ca91499588cb
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuestos_rinde_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e96f73b6-f731-41ac-9f56-a0b66090cfeb
+		sourceLineageTag: presupuestos_rinde_id
+		summarizeBy: sum
+		sourceColumn: presupuestos_rinde_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuestos_superficie_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 31fd763a-fc4f-4499-a351-f17c633951bd
+		sourceLineageTag: presupuestos_superficie_id
+		summarizeBy: sum
+		sourceColumn: presupuestos_superficie_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column variedad
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 77369c3b-8ad6-41bd-92a5-5d54d62c8fa1
+		sourceLineageTag: variedad
+		summarizeBy: none
+		sourceColumn: variedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column hectareas
+		dataType: double
+		sourceProviderType: float
+		lineageTag: c5bb1362-165e-4730-8898-e90ca6154f29
+		sourceLineageTag: hectareas
+		summarizeBy: sum
+		sourceColumn: hectareas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column rinde
+		dataType: double
+		sourceProviderType: float
+		lineageTag: e4a8987a-6bd4-488c-bf45-21deaad4204f
+		sourceLineageTag: rinde
+		summarizeBy: sum
+		sourceColumn: rinde
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ton fisicas'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: cf2cedd5-08fd-4b85-b94c-b22b163617ee
+		sourceLineageTag: ton fisicas
+		summarizeBy: sum
+		sourceColumn: ton fisicas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'x LF'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 932a3bb5-c122-4b72-ba23-099c52726cb1
+		sourceLineageTag: x LF
+		summarizeBy: sum
+		sourceColumn: x LF
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ton equiv lf'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 6ed82dce-c6e5-4608-8697-36805502c18b
+		sourceLineageTag: ton equiv lf
+		summarizeBy: sum
+		sourceColumn: ton equiv lf
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'superficie y volumen' = entity
+		mode: directLake
+		source
+			entityName: superficie y volumen
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

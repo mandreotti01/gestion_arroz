@@ -1,12 +1,12 @@
 table Producción
 	lineageTag: 44c84bbc-194c-4cdd-bf41-6e3a04b7be75
 
-	measure 'Sup. (has)' = SUM('Volumen y Superficie'[superficie.1])
+	measure 'Sup. (has)' = SUM('superficie y volumen'[hectareas])
 		lineageTag: c0e9410b-9b2b-495d-a3c6-9a8fbd84a1ec
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'ton físicas' = SUM('Volumen y Superficie'[ton fisicas])
+	measure 'ton físicas' = SUM('superficie y volumen'[ton fisicas])
 		lineageTag: e0eec4ad-20c0-4dd3-8211-31da241779db
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -16,7 +16,7 @@ table Producción
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'ton equiv LF' = SUM('Volumen y Superficie'[ton equiv lf])
+	measure 'ton equiv LF' = SUM('superficie y volumen'[ton equiv lf])
 		lineageTag: 32a1b282-06df-4e16-a407-a50b6a20fdd1
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -26,25 +26,11 @@ table Producción
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Toneladas Totales' = ```
-			
+	measure 'Toneladas Totales' =
 			SUMX(
-			    'barracudas presupuestos',
-			    LOOKUPVALUE(
-			        'barracudas presupuestos_superficies'[superficie.1],
-			        'barracudas presupuestos_superficies'[id],
-			        'barracudas presupuestos'[presupuestos_superficie_id]
-			    )
-			    *
-			    LOOKUPVALUE(
-			        'barracudas presupuestos_rindes'[rinde.1],
-			        'barracudas presupuestos_rindes'[id],
-			        'barracudas presupuestos'[presupuestos_rinde_id]
-			    )
+			'barracudas presupuestos',
+			    RELATED('barracudas presupuestos_rindes'[rinde.1]) * RELATED('barracudas presupuestos_superficies'[superficie.1])
 			)
-			
-			
-			```
 		lineageTag: a9968bc5-7200-4914-a3f8-db1f4d89f330
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}

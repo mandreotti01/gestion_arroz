@@ -55,11 +55,6 @@ relationship c769f731-0339-bc66-e45a-4fdc07339b01
 	fromColumn: 'archivo producción'.UP
 	toColumn: 'barracudas presupuestos_estructuras_unidades_productivas'.id
 
-relationship 210c41dd-b36c-d157-0ada-f6ba58f94e8c
-	toCardinality: many
-	fromColumn: 'Volumen y Superficie'.id
-	toColumn: 'barracudas presupuestos'.presupuestos_superficie_id
-
 relationship a5d3f95c-29f3-9856-3cbf-c7d83f11824e
 	fromColumn: 'barracudas presupuestos'.proyecto_id
 	toColumn: 'barracudas proyectos'.id
@@ -72,11 +67,15 @@ relationship cedec9e8-e458-2698-f8ed-c68eca6c5d6a
 	fromColumn: 'barracudas establecimientos'.up
 	toColumn: 'barracudas presupuestos_estructuras_unidades_productivas'.id
 
-relationship fd3d37cc-b640-f842-b3a4-77eabff3228a
-	fromColumn: 'Volumen y Superficie'.variedad
-	toColumn: 'barracudas arroz_variedades'.id
-
 relationship 2006804b-bfa7-dbfd-053f-16987f1b826b
 	fromColumn: 'barracudas presupuestos'.presupuestos_escenario_id
 	toColumn: 'barracudas presupuestos_escenarios'.id
+
+relationship ca49363c-f63d-e34c-b42f-073be0137887
+	fromColumn: 'superficie y volumen'.id
+	toColumn: 'barracudas presupuestos'.id
+
+relationship f4040600-83d8-24d1-80d5-08c8d3b47de5
+	fromColumn: 'superficie y volumen'.variedad
+	toColumn: 'barracudas arroz_variedades'.id
 
