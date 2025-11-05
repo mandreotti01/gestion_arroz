@@ -79,3 +79,7 @@ relationship f4040600-83d8-24d1-80d5-08c8d3b47de5
 	fromColumn: 'superficie y volumen'.variedad
 	toColumn: 'barracudas arroz_variedades'.id
 
+relationship 3449de4d-e566-a6c5-9128-314e12fb226b
+	fromColumn: 'barracudas presupuestos'.id
+	toColumn: vw_presupuestos_proyectos_establecimientos.presupuesto_id
+

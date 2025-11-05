@@ -1,0 +1,223 @@
+table vw_presupuestos_proyectos_establecimientos
+	lineageTag: fc3d9c32-320c-40ab-86a9-50835a0d9c0a
+	sourceLineageTag: [dbo].[vw_presupuestos_proyectos_establecimientos]
+
+	column presupuesto_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c4f76bb1-0dad-4278-8828-68123b46b2b1
+		sourceLineageTag: presupuesto_id
+		summarizeBy: none
+		sourceColumn: presupuesto_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuesto_proyecto_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 4aae25d7-e6ff-40e3-aed5-e99605948c68
+		sourceLineageTag: presupuesto_proyecto_id
+		summarizeBy: none
+		sourceColumn: presupuesto_proyecto_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuesto_escenario_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 17dbfe02-ad83-4c2c-8d12-a2028a605f50
+		sourceLineageTag: presupuesto_escenario_id
+		summarizeBy: none
+		sourceColumn: presupuesto_escenario_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuesto_version
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b8181272-97a1-4036-be05-548af8356add
+		sourceLineageTag: presupuesto_version
+		summarizeBy: none
+		sourceColumn: presupuesto_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column proyecto_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e31134d3-91b8-43a1-a6ec-a3ceddf1d24e
+		sourceLineageTag: proyecto_id
+		summarizeBy: none
+		sourceColumn: proyecto_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column proyecto_nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f23f6817-ae75-46e4-b023-29060ff5ddda
+		sourceLineageTag: proyecto_nombre
+		summarizeBy: none
+		sourceColumn: proyecto_nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column escenario_nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 24a2d733-5a44-4d08-b97d-b6b9eaca53b4
+		sourceLineageTag: escenario_nombre
+		summarizeBy: none
+		sourceColumn: escenario_nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column combo_up_escenario
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 984963a0-5ee6-4399-971a-0121215913c1
+		sourceLineageTag: combo_up_escenario
+		summarizeBy: none
+		sourceColumn: combo_up_escenario
+
+		annotation SummarizationSetBy = Automatic
+
+	column up_nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 93c14080-05a8-4788-ab74-9ba4ecf20263
+		sourceLineageTag: up_nombre
+		summarizeBy: none
+		sourceColumn: up_nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column up_pais
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 288f6c24-fc99-4216-8577-5f84c1dc50a1
+		sourceLineageTag: up_pais
+		summarizeBy: none
+		sourceColumn: up_pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column up_clasificacion
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c1ac887c-de90-4d34-9dd5-7fdc4e2da12a
+		sourceLineageTag: up_clasificacion
+		summarizeBy: none
+		sourceColumn: up_clasificacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column up_unidad_productiva
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 68560b72-768b-4bf2-9044-b916ad43cc7d
+		sourceLineageTag: up_unidad_productiva
+		summarizeBy: none
+		sourceColumn: up_unidad_productiva
+
+		annotation SummarizationSetBy = Automatic
+
+	column up_agrup
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: abc4354f-498b-4e3c-8840-3bf2b0ca4476
+		sourceLineageTag: up_agrup
+		summarizeBy: none
+		sourceColumn: up_agrup
+
+		annotation SummarizationSetBy = Automatic
+
+	column escenario_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 58e6824a-14bd-4630-acb0-9a12030a2196
+		sourceLineageTag: escenario_id
+		summarizeBy: none
+		sourceColumn: escenario_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column proyecto_establecimiento_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d9e2c120-ad85-4b9b-aac9-cc6cf3da52c3
+		sourceLineageTag: proyecto_establecimiento_id
+		summarizeBy: none
+		sourceColumn: proyecto_establecimiento_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column establecimiento_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2f324224-bd33-4254-b6c9-f06f5d44a0b0
+		sourceLineageTag: establecimiento_id
+		summarizeBy: none
+		sourceColumn: establecimiento_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column establecimiento_nombre
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ad86c8aa-3ea6-4dfe-bf5e-86bfb7735f3b
+		sourceLineageTag: establecimiento_nombre
+		summarizeBy: none
+		sourceColumn: establecimiento_nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column establecimiento_grupo
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ed9e74e5-3f16-4ed2-b290-560169ed2b18
+		sourceLineageTag: establecimiento_grupo
+		summarizeBy: none
+		sourceColumn: establecimiento_grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column establecimiento_up
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2c6e8c24-0d5a-4167-9ec1-0e0933d36973
+		sourceLineageTag: establecimiento_up
+		summarizeBy: none
+		sourceColumn: establecimiento_up
+
+		annotation SummarizationSetBy = Automatic
+
+	column up_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 189bacd6-85ae-43d4-a8b3-0fb0a14f909f
+		sourceLineageTag: up_id
+		summarizeBy: none
+		sourceColumn: up_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vw_presupuestos_proyectos_establecimientos = entity
+		mode: directLake
+		source
+			entityName: vw_presupuestos_proyectos_establecimientos
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

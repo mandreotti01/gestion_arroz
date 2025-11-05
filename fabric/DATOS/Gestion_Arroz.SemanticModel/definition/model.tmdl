@@ -54,4 +54,5 @@ ref table 'barracudas proyectos'
 ref table 'barracudas establecimientos'
 ref table 'barracudas arroz_variedades'
 ref table 'superficie y volumen'
+ref table vw_presupuestos_proyectos_establecimientos
 
